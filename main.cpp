@@ -17,6 +17,8 @@ int main() {
     srand(time(0));
     bool again;
 
+    list<Goat> trip {};
+
     // read & populate arrays for names and colors
     ifstream fin("names.txt");
     string names[SZ_NAMES];
@@ -29,9 +31,51 @@ int main() {
     while (fin1 >> colors[i++]);
     fin1.close();
 
-
-
-
     return 0;
+}
+
+int select_goat(list<Goat> trip)
+{
+
+}
+void delete_goat(list<Goat> &trip)
+{
+
+}
+void add_goat(list<Goat> &trip, string [], string [])
+{
+
+}
+void display_trip(list<Goat> trip)
+{
+
+}
+int main_menu()
+{
+    int choice;
+
+    while (true)
+    {
+        cout << "\n*** GOAT MANAGER 3001 ***\n";
+        cout << "[1] Add a goat\n";
+        cout << "[2] Delete a goat\n";
+        cout << "[3] List goats\n";
+        cout << "[4] Quit\n";
+        cout << "Choice --> \n";
+
+        try
+        {
+            string buf;
+            cin >> buf;
+            cin.ignore(1000, 10);
+            choice = stoi(buf);
+
+            return choice;
+        }
+        catch (invalid_argument&)
+        {
+            cout << "ERROR: You did not enter an integer\n";
+        }
+    }
 }
 
