@@ -15,6 +15,8 @@ public:
     // write three more constructors
     Goat(const string& n) : name(n), age(-1), color("") {}
 
+    Goat(const string& n, int a) : name(n), age(a), color("") {}
+
 
 
     // setters and getters
