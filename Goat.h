@@ -17,7 +17,7 @@ public:
 
     Goat(const string& n, int a) : name(n), age(a), color("") {}
 
-
+    Goat(const string&n, int a, const string& c) : name(n), age(a), color("") {}
 
     // setters and getters
     void set_name(string n)         { name = n; };
