@@ -15,7 +15,6 @@ int main_menu();
 
 int main() {
     srand(time(0));
-    bool again;
 
     list<Goat> trip {};
 
@@ -30,6 +29,12 @@ int main() {
     i = 0;
     while (fin1 >> colors[i++]);
     fin1.close();
+
+    while (true)
+    {
+        if (main_menu() == 1)
+            add_goat(trip);
+    }
 
     return 0;
 }
